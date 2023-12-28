@@ -69,12 +69,22 @@ def get_config(company):
     return tuple(config_paths)
 
 
+def get_task_prompt():
+    """
+
+    Returns:
+
+    """
+    with open("task_prompt.txt", "r") as f:
+        return f.read()
+
+
 parser = argparse.ArgumentParser(description='argparse')
 parser.add_argument('--config', type=str, default="Default",
                     help="Name of config, which is used to load configuration under CompanyConfig/")
 parser.add_argument('--org', type=str, default="DefaultOrganization",
                     help="Name of organization, your software will be generated in WareHouse/name_org_timestamp")
-parser.add_argument('--task', type=str, default="Develop a basic Gomoku game.",
+parser.add_argument('--task', type=str, default=get_task_prompt(),
                     help="Prompt of software")
 parser.add_argument('--name', type=str, default="Gomoku",
                     help="Name of software, your software will be generated in WareHouse/name_org_timestamp")
