@@ -30,7 +30,7 @@ except ImportError:
 
 import os
 
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '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')
+OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 if 'BASE_URL' in os.environ:
     BASE_URL = os.environ['BASE_URL']
 else:
