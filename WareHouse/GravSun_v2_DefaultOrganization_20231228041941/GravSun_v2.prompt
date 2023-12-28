@@ -1,0 +1,1 @@
+A game where randomly sized smaller circles are flying around the screen, that always start on the outside edge, and continuously spawn. In the center of the screen is one larger red circle. The red circle has a gravitational pull around it that slowly pulls things towards it. If any of the smaller circles collide with each other or the larger red circle, they should disappear.
